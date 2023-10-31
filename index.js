@@ -1,14 +1,19 @@
+const pageWrap = document.querySelector(".page-wrap");
+const containers = document.querySelectorAll(".cont");
+const yearlyBtn = document.querySelector(".yearly-btn");
 const navMobile = document.querySelector(".mobile-nav");
 const navToggle = document.querySelector(".nav-toggle");
-const closeNavMobile = document.querySelector(".close-btn");
-const pageWrap = document.querySelector(".page-wrap");
-const monthlyBtn = document.querySelector(".monthly-btn");
-const yearlyBtn = document.querySelector(".yearly-btn");
-const targetBlocks = document.querySelectorAll(".target-block");
-const containers = document.querySelectorAll(".cont");
 const planPeriods = document.querySelectorAll(".period");
-const romaticBlock = document.querySelector(".romantic-block");
+const monthlyBtn = document.querySelector(".monthly-btn");
+const closeNavMobile = document.querySelector(".close-btn");
 const romaticLeft = document.querySelector(".romantic-left");
+const romaticBlock = document.querySelector(".romantic-block");
+const targetBlocks = document.querySelectorAll(".target-block");
+// accodion
+const accBtns = document.querySelectorAll(".accordian-btn");
+console.log(accBtns);
+const accBodys = document.querySelectorAll(".accordian-body");
+console.log(accBodys);
 
 navToggle.addEventListener("click", () => {
   navMobile.classList.remove("hidden");
@@ -61,12 +66,6 @@ if (document.querySelector(".goal")) {
   });
 }
 
-// accodion
-const accBtns = document.querySelectorAll(".accordian-btn");
-console.log(accBtns);
-const accBodys = document.querySelectorAll(".accordian-body");
-console.log(accBodys);
-
 if (document.querySelector(".waitlist")) {
   accBtns.forEach((accBtn, index) => {
     accBtn.addEventListener("click", () => {
@@ -74,4 +73,9 @@ if (document.querySelector(".waitlist")) {
       accBtn.classList.toggle("rotate");
     });
   });
+}
+
+if (document.querySelector(".career-page")) {
+  const stackCont = document.querySelectorAll(".state");
+  console.log(stackCont);
 }
